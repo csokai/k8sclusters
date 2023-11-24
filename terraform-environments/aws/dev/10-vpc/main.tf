@@ -14,7 +14,7 @@ locals {
 }
 
 module "vpc" {
-  source = "../terraform-modules/aws/vpc"
+  source = "git::https://github.com/csokai/k8sclusters/terraform-modules/aws/vpc?ref=main"
 
   aws_region       = local.aws_region
   azs              = ["us-east-1a", "us-east-1c", "us-east-1d"]
