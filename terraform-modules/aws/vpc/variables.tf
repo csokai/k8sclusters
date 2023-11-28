@@ -1,8 +1,12 @@
 variable "aws_region" {
   default = "us-east-1"
 }
-variable "environment_name" {}
-variable "vpc_cidr" {}
+variable "environment_name" {
+    type   = string
+}
+variable "vpc_cidr" {
+    type = string
+}
 variable "tags" {
   type    = map(any)
   default = {}
